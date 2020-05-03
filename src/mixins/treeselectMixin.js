@@ -703,7 +703,9 @@ export default {
      * @type {nodeId[]}
      */
     internalValue() {
+      return [];
       let internalValue
+      
 
       // istanbul ignore else
       if (this.single || this.flat || this.disableBranchNodes || this.valueConsistsOf === ALL) {
