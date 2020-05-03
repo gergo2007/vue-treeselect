@@ -703,13 +703,11 @@ export default {
      * @type {nodeId[]}
      */
     internalValue() {
-      return [];
       let internalValue
-      
 
       // istanbul ignore else
       if (this.single || this.flat || this.disableBranchNodes || this.valueConsistsOf === ALL) {
-        internalValue = this.forest.selectedNodeIds.slice()
+        internalValue = []
       } else if (this.valueConsistsOf === BRANCH_PRIORITY) {
         internalValue = this.forest.selectedNodeIds.filter(id => {
           const node = this.getNode(id)
